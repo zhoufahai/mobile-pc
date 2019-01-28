@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>common</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  function isMobile () {
+    var userAgenInfo = navigator.userAgent
+    var Agents = new Array('Android', 'iPhone', 'SymbianOS', 'iPad', 'iPod')
+    var flag = false
+    for (var v = 0; v < Agents.length; v++) {
+      if (userAgenInfo.indexOf(Agents[v]) > 0) {
+        flag = true
+        break
+      }
+    }
+    return flag
+  }
+  if (isMobile()) {
+    window.location.href = '/m_index.html#/'
+  } else {
+    window.location.href = '/p_index.html#/'
+  }
+</script>
