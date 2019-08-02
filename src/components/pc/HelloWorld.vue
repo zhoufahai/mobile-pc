@@ -1,6 +1,7 @@
 <template>
   <div class="pc">
     <h1>{{ msg }}</h1>
+    <button @click="go">跳转到第二个页面</button>
   </div>
 </template>
 
@@ -10,6 +11,11 @@ export default {
   data () {
     return {
       msg: 'HelloWorld,I am PC'
+    }
+  },
+  methods: {
+    go () {
+      this.$router.push({ path: '/secondPage' })
     }
   }
 }
